@@ -1,0 +1,31 @@
+header {
+    background-color: lightskyblue;
+    text-align: left;
+}
+nav {
+    border-bottom: 2px solid black;
+}    
+.sections ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+.section {
+    display: inline-block;
+}
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.picture-of-shoe {
+    width: 450px;
+}
+h2 {
+    font-weight: 900;
+}
