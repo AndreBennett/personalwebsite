@@ -7,26 +7,40 @@
     <link rel="stylesheet" href="style.css">  
 
 </head>
-<header> 
-    <nav>
+<div class="header"> 
+    <div class="nav">
         <ol class="sections">
             <li class="section"><a href="home.html">Home</a></li>
             <li class="section"><a href="about.html">About</a></li>
             <li class="section"><a href="contact.html">Contact</a></li>
         </ol>
-        <button onclick="myFunction()">Mode Switch</button>
+        <button onclick="Switch()">Mode Switch</button>
         <script>
-            function myFunction() {
-               var element = document.body;
+            function Switch() {
+               const element = document.body;
                element.classList.toggle("dark-mode");
             }
             </script>
-    </nav>
-</header>
+    </div>
+</div>
 <body>
 
     <h1>
         Things that I have worked on to perfect my craft 
     </h1>
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        const nav = document.getElementById("nav");
+        const sticky = nav.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            nav.classList.add("sticky")
+          } else {
+            nav.classList.remove("sticky");
+          }
+        }
+        </script>
 </body>
 </html>

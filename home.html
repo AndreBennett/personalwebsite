@@ -6,30 +6,42 @@
     <title>Personal Website </title>
     <link rel="stylesheet" href="style.css">  
 </head>
-<header> 
-    <nav>
+<div class="header"> 
+    <div class="nav">
         <ol class="sections">
             <li class="section"><a href="about.html">About</a></li>
             <li class="section"><a href="portfolio.html">Portfolio</a></li>
             <li class="section"><a href="contact.html">Contact</a></li>
         </ol>
-        <button onclick="myFunction()">Mode Switch</button>
+        <button onclick="Switch()">Mode Switch</button>
         <script>
-            function myFunction() {
-               var element = document.body;
+            function Switch() {
+               const element = document.body;
                element.classList.toggle("dark-mode");
             }
             </script>
-    </nav>
-</header>
+    </div>
+</div>
 <body>
-
         <h1>
             Sports & Shoes 
             <p> Intrest are in Sports and shoes mainly. </p>
         </h1>
         <h2> No such thing as a life thats better than yours, Love Yourz- J. Cole  </h2>
         <img class="picture-of-shoe" src="https://imgs.search.brave.com/hP4gQtSLJAn2riOc_6eyoVV0i5fzu4HXZcF0cDg5tKA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bmljZWtpY2tzLmNv/bS9maWxlcy8yMDIx/LzAxL0Fpci1Kb3Jk/YW4tMS1SZXRyby1I/aWdoLU9HLUh5cGVy/LVJveWFsLTU1NTA4/OC00MDItMDAuanBn" alt="picture of shoe" />
-        
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            const nav = document.getElementById("nav");
+            const sticky = nav.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                nav.classList.add("sticky")
+              } else {
+                nav.classList.remove("sticky");
+              }
+            }
+            </script>
     </body>
 </html>
