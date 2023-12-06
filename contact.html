@@ -6,13 +6,23 @@
     <title>Get in contact with me</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <header> 
+    <nav>
+        <ol class="sections">
+            <li class="section"><a href="home.html">Home</a></li>
+            <li class="section"><a href="about.html">About</a></li>
+            <li class="section"><a href="portfolio.html">Portfolio</a></li>
+        </ol>
+        <button onclick="myFunction()">Dark</button>
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            </script>
+    </nav>
+</header>
   <body>
-    <button onclick="myFunction()">Dark</button>
-    <script>
-      function myFunction() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-      }
-    </script>
+    
   </body>
 </html>
